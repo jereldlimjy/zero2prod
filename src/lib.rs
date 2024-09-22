@@ -15,6 +15,7 @@ async fn health_check() -> impl Responder {
 }
 
 async fn subscribe(form: web::Form<FormData>) -> impl Responder {
+    println!("email: {}, name: {}", form.email, form.name);
     HttpResponse::Ok()
 }
 
